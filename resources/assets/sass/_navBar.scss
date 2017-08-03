@@ -1,0 +1,129 @@
+//This is the sytles for the nav bar menu
+#nav-bar {
+    background-color: $brandColor;
+    width: 100%;
+    position: fixed;
+    
+    #nav-brand {
+        float: left;
+        width: 100px;
+        margin: 0 20px;
+        
+        #nav-brand-logo {
+                
+            a {
+                display: block;
+                width: 100px;
+                height: 53px;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            
+        }
+    }
+    
+    #nav-links {
+        float: left;
+        margin: 0 20px;
+        ul {
+            
+            li {
+                list-style: none;
+                display: inline-block;
+                a {
+                    @include anchor (#fff, block, 19px 10px, 0);
+                    text-decoration: none;
+                    font-weight: 400;
+                    font-size: 15px;
+                    &:hover {
+                        background-color: $brandColorHover;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    #nav-auth {
+        float: right;
+        position: relative;
+        margin: 0 30px;
+        
+        #guest-pull {
+            @include anchor (#fff, block, 20px 10px, 0 40px);
+            font-size: 14px;
+        }
+        
+        #auth-guest {
+            margin: 0 40px;
+            position: absolute;
+            background-color: #fff;
+            top: 57px;
+            right: 0;
+            box-shadow: $shdow2;
+            padding: 10px 0;
+            width: 150px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            display: none;
+            
+            a {
+                @include anchor (#000, block, 4px 9px, 0);
+                font-size: 15px;
+                font-weight: 300;
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+        }
+        
+        .showAuthGest {
+            display: block !important;
+        }
+        
+        .addBgToAuthPull {
+             background-color: #9f0000; 
+        }
+        
+        
+    }
+    
+    
+
+    #nav-search {
+        float: right;
+        margin: 0 30px;
+        
+        #seach-form-wrap {
+            line-height: 56px;
+            position: relative;
+            
+            i {
+                position: absolute;
+                top: 19px;
+                left: 11px;
+                color: #fff;
+                font-size: 15px;
+            }
+            
+            input {
+                padding: 8px 14px 8px 35px;
+                min-width: 200px;
+                font-size: 14px;
+                border: none;
+                outline: none;
+                background: $brandColorHover;
+                color: #fff;
+                border-radius: 3px;
+                transition: 0.5s;
+                
+            }
+        }
+        
+    }
+    
+    
+}

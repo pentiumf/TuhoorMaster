@@ -1,0 +1,76 @@
+
+// Fonts
+//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+//Mixin
+@import "mixings";
+
+//NavBar
+@import "navBar";
+
+//Auth
+@import "auth";
+
+
+
+// Bootstrap
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+    color: $textColor;
+}
+
+
+//Page Content
+#Page-Content {
+    padding: 80px 20px 20px 20px;
+}
+
+//Content Template
+//Media Notes
+@import "mediaNote";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

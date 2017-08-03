@@ -1,0 +1,37 @@
+//All mixings
+
+//@mixin box($w, $h, $c, $r) {
+//	width: $w;
+//	height: $h;
+//	background: $c;
+//	border-radius: $r
+//}
+
+//@mixin anc($type, $c, $r) {
+//	text-decoration: none;
+//	@if $type == big {
+//		padding: 20px 50px;
+//		background: pink;
+//		border-radius: $r;
+//		color: $c;
+//	}
+//	@else if $type == small {
+//		padding: 10px 20px;
+//		border-radius: $r;
+//		background: pink;
+//		color: $c;
+//	}
+//}
+
+//.box {
+//	@include box(200px, 200px, #999, 2px);
+//}
+
+
+@mixin anchor($color, $display, $padding, $margin) {
+    text-decoration: none;
+    color: $color;
+    display: $display;
+    padding: $padding;
+    margin: $margin;
+}

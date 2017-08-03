@@ -1,0 +1,121 @@
+//This is the styles for login and logout
+.auth-container {
+    text-align: center;
+    
+    .auth-wrap {
+        margin: 7em auto;
+        width: 50%;
+            
+        .auth-header {
+            padding: 20px 0;
+            h1 {
+                margin: 20px 0;
+                font-weight: 700;
+                font-size: 50px;
+            
+                a {
+                    color: $brandColor;
+                    text-decoration: none;
+                    
+                    span {
+                        font-size: 15px;
+                    }
+                }
+            }
+            
+            h2 {
+                font-weight: 300;
+                font-size: 22px;
+                color: $brandColor;
+            }
+        }
+        
+        .auth-body {
+            
+            form {
+                
+                .field-wrap {
+                    margin: 20px 0;
+                    
+                    input {
+                        width: 60%;
+                        height: 40px;
+                        font-size: 17px;
+                        padding: 5px 10px;
+                        border: 1px solid #ccc;
+                        outline: none;
+                        background-color: #eee;
+                        border-radius: 2px;
+                        transition: 0.3s;
+                        &:focus {
+                            box-shadow: 1px 1px 10px 5px rgba(160, 160, 160, 0.53);
+                        }
+                    }
+                    
+                    .help-block {
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: $brandColor;
+                    }
+                    
+                    #rememberMe {
+                        width: 25px;
+                        height: 25px;
+                        padding: 5px 10px;
+                        font-size: 14px;
+                    }
+                    
+                    #rememberMeText {
+                        font-size: 13px;
+                        vertical-align: 6px;
+                    }
+                    
+                    button {
+                        width: 60%;
+                        height: 40px;
+                        background-color: $brandColor;
+                        border: none;
+                        border-radius: 2px;
+                        cursor: pointer;
+                        font-size: 17px;
+                        color: #fff;
+                        &:hover {
+                            background-color: $brandColorHover;
+                        }
+                    }
+                    
+                    .switch-auth-route {
+                        color: $blueColor;
+                        font-weight: 400;
+                        font-size: 15px;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    
+                    
+                }
+                
+            }
+        }
+    }
+    
+    .auth-footer {
+        p {
+            font-size: 12px;
+            
+            a {
+                color: $blueColor;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+}
+
+
+
