@@ -26,7 +26,7 @@ class UserProfessionalController extends Controller
         $profiles =  $user->proProfiles;
         
         
-        return view('user.professional.index', compact('profiles'));
+        return view('dashboard.professional.index', compact('profiles'));
         
         
     }
@@ -41,7 +41,7 @@ class UserProfessionalController extends Controller
         $categories = Procategory::pluck('name', 'id')->all();
         $countries = Country::pluck('iso', 'id')->all();
         $types = Protype::pluck('name', 'id')->all();
-        return view('user.professional.create', compact('categories', 'countries', 'types'));
+        return view('dashboard.professional.create', compact('categories', 'countries', 'types'));
     }
 
     /**
@@ -80,7 +80,7 @@ class UserProfessionalController extends Controller
         
         $user->proProfiles()->create($input);
         
-        return redirect('user/professional');
+        return redirect('dashboard/professional');
     }
 
     /**
@@ -99,10 +99,10 @@ class UserProfessionalController extends Controller
         
         if ($user_id === $profile_user_id){
             
-            return view('user.professional.show', compact('profile'));
+            return view('dashboard.professional.show', compact('profile'));
         }
         
-        return redirect('user/professional');
+        return redirect('dashboard/professional');
         
     }
 
@@ -128,10 +128,10 @@ class UserProfessionalController extends Controller
 
             $profile = Professional::findOrfail($id);
 
-            return view('user.professional.edit', compact('categories', 'countries', 'types', 'profile'));
+            return view('dashboard.professional.edit', compact('categories', 'countries', 'types', 'profile'));
         }
         
-        return redirect('user/professional');
+        return redirect('dashboard/professional');
         
     }
 
@@ -171,7 +171,7 @@ class UserProfessionalController extends Controller
         
         $user->proProfiles()->whereId($id)->first()->update($input);
         
-        return redirect('user/professional');
+        return redirect('dashboard/professional');
     }
 
     /**
@@ -189,7 +189,7 @@ class UserProfessionalController extends Controller
         
         $profile->delete();
         
-        return redirect('user/professional');
+        return redirect('dashboard/professional');
     }
 }
 

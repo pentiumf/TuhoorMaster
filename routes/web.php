@@ -76,7 +76,7 @@ Route::group(['middleware'=>'guest'], function() {
 
 
 
-//Authenticated User Routes
+//Authenticated User Routes(dashboard)
 Route::group(['middleware'=>'auth'], function() {
     
     Route::get('/test', function () {
@@ -85,12 +85,12 @@ Route::group(['middleware'=>'auth'], function() {
         return $sec->category;
     });
     
-    //User pros
-    Route::get('user', function() {
-        return view('user.index');
+    //User Professionals
+    Route::get('dashboard', function() {
+        return view('dashboard.index');
     });
 
-    Route::resource('user/professional', 'UserProfessionalController');
+    Route::resource('dashboard/professional', 'UserProfessionalController');
 
 });
 

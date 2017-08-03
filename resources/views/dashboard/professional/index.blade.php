@@ -1,4 +1,4 @@
- @extends('layouts.user')
+ @extends('layouts.dashboard')
 
 
 @section('content')
@@ -30,26 +30,33 @@
 		    </thead>
 		    <tbody>
 
+		    	@if ($profiles)
+
+		    	@foreach ($profiles as $profile) 
 
 		    		<tr>
 				        <td>{{$profile->id}}</td>  
-				        <td><a href="{{route('professional.edit', $profile->id)}}">{{$profile->name}}</a></td>  
-				        <td>{{$profile->category->name}}</td>  
-				        <td>{{$profile->membership->name}}</td>  
-				        <td>{{$profile->about}}</td>  
-				        <td>{{$profile->email}}</td> 
+				        <td><a href="{{route('professional.show', $profile->id)}}">{{$profile->name}}</a></td>
+				        <td>{{$profile->category->name}}</td>
+				        <td>{{$profile->membership->name}}</td>
+				        <td>{{$profile->about}}</td>
+				        <td>{{$profile->email}}</td>
 				        <td>{{$profile->first_contact}}</td>
 				        <td>{{$profile->second_contact}}</td>
 				        <td>{{$profile->country->iso}}</td>
 				        <td>{{$profile->region}}</td>
 				        <td>{{$profile->city}}</td>
 				        <td>{{$profile->website}}</td>
-				        <td>{{$profile->profile_photo}}</td> 
+				        <td>{{$profile->profile_photo}}</td>
 				        <td>{{$profile->cover_photo}}</td>
 				        <td>{{$profile->created_at ? $profile->created_at->diffForHumans() : 'No Date'}}</td>
 				        <td>{{$profile->updated_at ? $profile->updated_at->diffForHumans() : 'No Date'}}</td>
 				      </tr> 
 
+
+		    	@endforeach
+
+		      	@endif
 
 		    </tbody>
 		  </table>

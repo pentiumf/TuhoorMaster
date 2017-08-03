@@ -32,8 +32,8 @@ class UserCreateProfileRequest extends FormRequest
             'region' => 'required',
             'city' => 'required',
             'protype_id' => 'required',
-            'profile_photo' => 'image|mimes:jpg,png|max:20000',
-            'cover_photo' => 'image|mimes:jpg,png|max:20000',
+            'profile_photo' => 'mimes:jpeg,jpg,png | max:20000',
+            'cover_photo' => 'mimes:jpeg,jpg,png | max:20000',
         ];
     }
     
